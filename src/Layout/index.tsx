@@ -5,7 +5,7 @@ export const Layout = () => {
     return (
         <>
             <Header>
-                <Title>Formulario</Title>
+                <Title>Foem Crud</Title>
 
                 <Ul>
                     <li>
@@ -21,4 +21,5 @@ export const Layout = () => {
             </main>
         </>
     )
+
 }
