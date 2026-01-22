@@ -5,7 +5,7 @@ export const Layout = () => {
     return (
         <>
             <Header>
-                <Title>Foem Crud</Title>
+                <Title>Form Crud</Title>
 
                 <Ul>
                     <li>
@@ -23,3 +23,4 @@ export const Layout = () => {
     )
 
 }
+
