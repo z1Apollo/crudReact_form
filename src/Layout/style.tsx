@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export const Header = styled.header`
     display: flex;
@@ -9,7 +9,7 @@ export const Header = styled.header`
 
 export const Title = styled.h1`
     font-size: 35px;
-    color: #991e1e;
+    color: #282899;
 `
 
 export const Ul = styled.ul`
@@ -17,14 +17,19 @@ export const Ul = styled.ul`
     gap: 30px;
 `
 
-export const Links = styled(Link)`
-    color: #a42020a9;
+export const Links = styled(NavLink)`
+    color: #2828997a;
     font-size: 20px;
     transform: 0.2s ease-in;
     font-weight: 700;
 
     &:hover {
-        color: #a11d1d;
-        border-bottom: 2px solid #bb2a2a;
+        color: #282899;
+        border-bottom: 2px solid #282899;
+    }
+
+    &.active {
+        color: #282899;
+        border-bottom: 2px solid #282899;
     }
 `

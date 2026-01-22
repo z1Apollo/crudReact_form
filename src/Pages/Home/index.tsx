@@ -3,6 +3,7 @@ import { Cont, DivForm, Form } from "./style"
 import React, { useState } from "react"
 import { MaskCPF, MaskDate, MaskPhone } from "../../Components/Formatação Form"
 import { BtnSubmit } from "../../Components/ButtonSubmit/style"
+import { InputForm } from "../../Components/InputsForm/style"
 
 interface IDadosUsuario {
     id: string,
@@ -63,13 +64,13 @@ export const Home = () => {
     return (
         <>
             <Cont>
-                <h2>Formulario</h2>
+                <h2>Envio de dados</h2>
 
                 <Form onSubmit={handleSubmit}>
                     <DivForm>
                         <div>
                             <label>Nome: </label> <br />
-                            <input 
+                            <InputForm 
                             type="text" 
                             name="nome"
                             value={formulario.nome}
@@ -80,7 +81,7 @@ export const Home = () => {
 
                         <div>
                             <label>Telefone: </label> <br />
-                            <input 
+                            <InputForm 
                             type="text" 
                             name="telefone"
                             placeholder="(85) 94002-8922"
@@ -92,7 +93,7 @@ export const Home = () => {
                         <div>
 
                             <label>CPF: </label> <br />
-                            <input 
+                            <InputForm 
                             type="text" 
                             name="cpf"
                             placeholder="123.456.789-00"
@@ -104,7 +105,7 @@ export const Home = () => {
 
                         <div>
                             <label>Email: </label> <br />
-                            <input 
+                            <InputForm 
                             type="email" 
                             name="email"
                             value={formulario.email}
@@ -115,7 +116,7 @@ export const Home = () => {
 
                         <div>
                             <label>Nascimento: </label> <br />
-                            <input 
+                            <InputForm 
                             type="text" 
                             name="nascimento"
                             placeholder="DD/MM/AAAA"

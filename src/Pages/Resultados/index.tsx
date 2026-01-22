@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { BtnResults, ContResults, Resultados } from "./style"
+import { BtnResults, ContResults, DadosResults, Resultados } from "./style"
 import { BtnRemove } from "../../Components/ButtonRemove/style"
 import { BtnEdit } from "../../Components/ButtonEdit/style"
 import { useNavigate } from "react-router-dom"
@@ -31,14 +31,14 @@ import { useNavigate } from "react-router-dom"
         return (
             <>
                 <ContResults>
-                    <h2>Resultados:</h2>
+                    <h2>Lista de dados</h2>
 
                     <Resultados>
                         {usuarios.length === 0 ? (
                             <p>Nenhum usuário cadastrado</p>
                             ) : (
                             usuarios.map((usuario, index) => (
-                                <div key={index}>
+                                <DadosResults key={index}>
                                     <h3>{usuario.nome}</h3>
                                     <p>Email: {usuario.email}</p>
                                     <p>Telefone: {usuario.telefone}</p>
@@ -52,7 +52,7 @@ import { useNavigate } from "react-router-dom"
                                         <BtnEdit onClick={() => navigate(`/edit/${usuario.id}`)}>Editar</BtnEdit>
                                     </BtnResults>
                                     
-                                </div>
+                                </DadosResults>
                             ))
                         )}
                     </Resultados>
